@@ -1,15 +1,11 @@
 # Streaming Graph Data Processing Pipeline
 
-This repository documents the design and architecture of a distributed, streaming
-graph data processing pipeline built using Kubernetes, Apache Kafka, and Neo4j.
+This repository documents the design and architecture of a distributed, streaming graph data processing pipeline built using Kubernetes, Apache Kafka, and Neo4j.
 
-The system ingests real-time transportation events, models them as a graph, and
-supports graph analytics such as PageRank and Breadth-First Search (BFS).
+The system ingests real-time transportation events, models them as a graph, and supports graph analytics such as PageRank and Breadth-First Search (BFS).
 
 > **Note**  
-> This repository contains architecture diagrams, system design explanations,
-> and results summaries only. Implementation code is kept private to comply with
-> academic integrity policies.
+> This repository contains architecture diagrams, system design explanations, and results summaries only. Implementation code is kept private to comply with academic integrity policies.
 
 ---
 
@@ -26,8 +22,7 @@ The project was implemented in two phases:
 1. A Dockerized Neo4j graph ingestion and analytics setup
 2. A Kubernetes-based streaming pipeline using Kafka and Neo4j
 
-Design decisions, tradeoffs, and failure-handling considerations are documented
-in the `design/` directory.
+Design decisions, tradeoffs, and failure-handling considerations are documented in the `design/` directory.
 
 ---
 
@@ -35,8 +30,7 @@ in the `design/` directory.
 
 ![System Architecture](architecture/overall-architecture.png)
 
-The pipeline runs inside a Kubernetes (Minikube) cluster and ingests streaming events
-via Apache Kafka. Kafka Connect transforms and writes records into Neo4j, where graph
+The pipeline runs inside a Kubernetes (Minikube) cluster and ingests streaming events via Apache Kafka. Kafka Connect transforms and writes records into Neo4j, where graph
 analytics such as PageRank and BFS are executed by external clients.
 
 At a high level, the data flows as follows:
@@ -68,8 +62,7 @@ This model enables efficient traversal and ranking across connected locations.
 ## Graph Analytics
 
 ### PageRank
-Used to identify high-importance locations based on inbound connectivity and
-weighted trip relationships.
+Used to identify high-importance locations based on inbound connectivity and weighted trip relationships.
 
 ### Breadth-First Search (BFS)
 Used to compute traversal paths between locations in the transportation graph.
@@ -100,6 +93,4 @@ Validation summaries are available in the `results/` directory.
 
 ## Academic Integrity
 
-This project was completed as part of graduate-level coursework.
-All implementation code, configuration files, and datasets are kept private
-to comply with academic integrity and plagiarism policies.
+This project was completed as part of graduate-level coursework. All implementation code, configuration files, and datasets are kept private to comply with academic integrity and plagiarism policies.

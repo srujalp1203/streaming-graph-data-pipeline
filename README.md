@@ -32,6 +32,10 @@ The project was implemented in two phases:
 
 ![System Architecture](architecture/overall-architecture.png)
 
+The pipeline runs inside a Kubernetes (Minikube) cluster and ingests streaming events
+via Apache Kafka. Kafka Connect transforms and writes records into Neo4j, where graph
+analytics such as PageRank and BFS are executed by external clients.
+
 At a high level, the data flows as follows:
 
 1. Streaming events are produced into Kafka topics

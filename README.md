@@ -30,14 +30,14 @@ The project was implemented in two phases:
 
 ## High-Level Architecture
 
+![System Architecture](architecture/overall-architecture.png)
+
 At a high level, the data flows as follows:
 
 1. Streaming events are produced into Kafka topics
 2. Kafka Connect consumes events and transforms them into graph entities
 3. Neo4j stores locations as nodes and trips as relationships
 4. Graph algorithms are executed using Neo4j Graph Data Science (GDS)
-
-Architecture diagrams are provided in the `architecture/` directory.
 
 ---
 

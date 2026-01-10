@@ -26,6 +26,9 @@ The project was implemented in two phases:
 1. A Dockerized Neo4j graph ingestion and analytics setup
 2. A Kubernetes-based streaming pipeline using Kafka and Neo4j
 
+Design decisions, tradeoffs, and failure-handling considerations are documented
+in the `design/` directory.
+
 ---
 
 ## High-Level Architecture
@@ -81,7 +84,7 @@ Both algorithms were executed using Neo4j Graph Data Science.
 - Graph schema and relationship counts were verified
 - PageRank and BFS outputs were validated against expected traversal behavior
 
-Screenshots and summaries are available in the `results/` directory.
+Validation summaries are available in the `results/` directory.
 
 ---
 
